@@ -10,12 +10,13 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+
 using Microsoft.Devices;
 using System.IO;
 using System.IO.IsolatedStorage;
 using Microsoft.Xna.Framework.Media;
 
-namespace BillSync
+namespace PhotoEnhancement
 {
     public partial class Camera : PhoneApplicationPage
     {
@@ -183,7 +184,6 @@ namespace BillSync
                 // Set the position of the stream back to start
                 e.ImageStream.Seek(0, SeekOrigin.Begin);
 
-                // Save picture as JPEG to isolated storage.
                 using (IsolatedStorageFileStream targetStream = isStore.OpenFile(completeName, FileMode.Create, FileAccess.Write))
                 {
                     // Initialize the buffer for 4KB disk pages.
@@ -229,8 +229,7 @@ namespace BillSync
                 {
                     txtDebug.Text = "Captured image available, saving thumbnail.";
                 });
-
-                // Save thumbnail as JPEG to isolated storage.
+                
                 using (IsolatedStorageFileStream targetStream = isStore.OpenFile(completeName, FileMode.Create, FileAccess.Write))
                 {
                     // Initialize the buffer for 4KB disk pages.

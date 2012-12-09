@@ -31,17 +31,17 @@
             </controls:PanoramaItem>
             <controls:PanoramaItem Header="photos">
                 <Grid>
-                    <Image Height="150" Tap="image1_Tap" HorizontalAlignment="Left" Margin="5,5,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="200" />
-                    <Image Height="150" Tap="image2_Tap" HorizontalAlignment="Left" Margin="213,5,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="200" />
-                    <Image Height="150" Tap="image3_Tap" HorizontalAlignment="Left" Margin="5,164,0,0" Name="image3" Stretch="Fill" VerticalAlignment="Top" Width="200" />
-                    <Image Height="150" Tap="image4_Tap" HorizontalAlignment="Left" Margin="213,164,0,0" Name="image4" Stretch="Fill" VerticalAlignment="Top" Width="200" />
-                    <Image Height="150" Tap="image5_Tap" HorizontalAlignment="Left" Margin="5,320,0,0" Name="image5" Stretch="Fill" VerticalAlignment="Top" Width="200" />
-                    <Image Height="150" Tap="image6_Tap" HorizontalAlignment="Left" Margin="213,320,0,0" Name="image6" Stretch="Fill" VerticalAlignment="Top" Width="200" />
+                    <Image Height="150" Tap="image_Tap" HorizontalAlignment="Left" Margin="5,5,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="200" />
+                    <Image Height="150" Tap="image_Tap" HorizontalAlignment="Left" Margin="213,5,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="200" />
+                    <Image Height="150" Tap="image_Tap" HorizontalAlignment="Left" Margin="5,164,0,0" Name="image3" Stretch="Fill" VerticalAlignment="Top" Width="200" />
+                    <Image Height="150" Tap="image_Tap" HorizontalAlignment="Left" Margin="213,164,0,0" Name="image4" Stretch="Fill" VerticalAlignment="Top" Width="200" />
+                    <Image Height="150" Tap="image_Tap" HorizontalAlignment="Left" Margin="5,320,0,0" Name="image5" Stretch="Fill" VerticalAlignment="Top" Width="200" />
+                    <Image Height="150" Tap="image_Tap" HorizontalAlignment="Left" Margin="213,320,0,0" Name="image6" Stretch="Fill" VerticalAlignment="Top" Width="200" />
                 </Grid>
             </controls:PanoramaItem>
             <!--Panorama item one-->
             <controls:PanoramaItem Header="enhancments">
-                <Grid/>
+                <Grid></Grid>
             </controls:PanoramaItem>
 
             <!--Panorama item two-->
