@@ -29,6 +29,7 @@
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton IconUri="/Images/save.png" Click="ApplicationBarSaveButton_Click" Text="save"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/deleteItem.png" Click="ApplicationBarDeleteButton_Click" Text="save"/>
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="invert" Click="invert_Click"/>
             </shell:ApplicationBar.MenuItems>

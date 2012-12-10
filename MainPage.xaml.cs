@@ -13,6 +13,7 @@ using Microsoft.Phone.Controls;
 using System.Windows.Media.Imaging;
 using System.IO.IsolatedStorage;
 using System.IO;
+using ImageTools;
 
 namespace PhotoEnhancement
 {
@@ -54,13 +55,28 @@ namespace PhotoEnhancement
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             IList<BitmapImage> isoImages = getImages();
+            IList<Image> images = new List<Image>();
+            images.Add(image1);
+            images.Add(image2);
+            images.Add(image3);
+            images.Add(image4);
+            images.Add(image5);
+            images.Add(image6);
+            WriteableBitmap wmp;
 
-            image1.Source = isoImages[0];
-            image2.Source = isoImages[1];
-            image3.Source = isoImages[2];
-            image4.Source = isoImages[3];
-            image5.Source = isoImages[4];
-            image6.Source = isoImages[5];
+            for (int i = 0; i < isoImages.Count; i++)
+            {
+                if (isoImages[i] != null)
+                {
+                    wmp = new WriteableBitmap(isoImages[i]);
+                    wmp = wmp.Rotate(90);
+                    images[i].Source = wmp;
+                }
+                else
+                {
+                    images[i].Source = isoImages[i];
+                }
+            }
         }
 
         private IList<BitmapImage> getImages()
@@ -127,6 +143,5 @@ namespace PhotoEnhancement
 
             return thumbnails;
         }
-
     }
 }

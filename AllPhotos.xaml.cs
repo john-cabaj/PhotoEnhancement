@@ -18,6 +18,7 @@ namespace PhotoEnhancement
 {
     public partial class AllPhotos : PhoneApplicationPage
     {
+        IList<Image> images = new List<Image>();
         public AllPhotos()
         {
             InitializeComponent();
@@ -29,6 +30,10 @@ namespace PhotoEnhancement
             IsolatedStorageFile iso = IsolatedStorageFile.GetUserStoreForApplication();
             IList<string> thumbnails = findThumbnails(iso.GetFileNames());
             int margin = 5;
+            foreach (Image img in images)
+            {
+                ContentPanel.Children.Remove(img);
+            }
 
             for (int i = 0; i < thumbnails.Count; i = i + 2)
             {
@@ -41,7 +46,8 @@ namespace PhotoEnhancement
                 image1.Width = 230;
                 image1.Tap +=new EventHandler<GestureEventArgs>(image_Tap);
                 image1.Tag = thumbnails[i];
-                image1.Source = getThumbnail(thumbnails[i], iso);
+                image1.Source = new WriteableBitmap(getThumbnail(thumbnails[i], iso)).Rotate(90);
+                images.Add(image1);
                 ContentPanel.Children.Add(image1);
 
                 if (i + 1 < thumbnails.Count)
@@ -55,7 +61,8 @@ namespace PhotoEnhancement
                     image2.Width = 240;
                     image2.Tap += new EventHandler<GestureEventArgs>(image_Tap);
                     image2.Tag = thumbnails[i+1];
-                    image2.Source = getThumbnail(thumbnails[i+1], iso);
+                    image2.Source = new WriteableBitmap(getThumbnail(thumbnails[i + 1], iso)).Rotate(90);
+                    images.Add(image2);
                     ContentPanel.Children.Add(image2);
                 }
 

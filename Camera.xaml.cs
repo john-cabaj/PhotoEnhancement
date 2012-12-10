@@ -119,34 +119,34 @@ namespace PhotoEnhancement
             }
         }
 
-        // Ensure that the viewfinder is upright in LandscapeRight.
-        protected override void OnOrientationChanged(OrientationChangedEventArgs e)
-        {
-            if (cam != null)
-            {
-                // LandscapeRight rotation when camera is on back of device.
-                int landscapeRightRotation = 180;
+        //// Ensure that the viewfinder is upright in LandscapeRight.
+        //protected override void OnOrientationChanged(OrientationChangedEventArgs e)
+        //{
+        //    if (cam != null)
+        //    {
+        //        // LandscapeRight rotation when camera is on back of device.
+        //        int landscapeRightRotation = 180;
 
-                // Change LandscapeRight rotation for front-facing camera.
-                if (cam.CameraType == CameraType.FrontFacing) landscapeRightRotation = -180;
+        //        // Change LandscapeRight rotation for front-facing camera.
+        //        if (cam.CameraType == CameraType.FrontFacing) landscapeRightRotation = -180;
 
-                // Rotate video brush from camera.
-                if (e.Orientation == PageOrientation.LandscapeRight)
-                {
-                    // Rotate for LandscapeRight orientation.
-                    viewfinderBrush.RelativeTransform =
-                        new CompositeTransform() { CenterX = 0.5, CenterY = 0.5, Rotation = landscapeRightRotation };
-                }
-                else
-                {
-                    // Rotate for standard landscape orientation.
-                    viewfinderBrush.RelativeTransform =
-                        new CompositeTransform() { CenterX = 0.5, CenterY = 0.5, Rotation = 0 };
-                }
-            }
+        //        // Rotate video brush from camera.
+        //        if (e.Orientation == PageOrientation.LandscapeRight)
+        //        {
+        //            // Rotate for LandscapeRight orientation.
+        //            viewfinderBrush.RelativeTransform =
+        //                new CompositeTransform() { CenterX = 0.5, CenterY = 0.5, Rotation = landscapeRightRotation };
+        //        }
+        //        else
+        //        {
+        //            // Rotate for standard landscape orientation.
+        //            viewfinderBrush.RelativeTransform =
+        //                new CompositeTransform() { CenterX = 0.5, CenterY = 0.5, Rotation = 0 };
+        //        }
+        //    }
 
-            base.OnOrientationChanged(e);
-        }
+        //    base.OnOrientationChanged(e);
+        //}
 
         void cam_CaptureCompleted(object sender, CameraOperationCompletedEventArgs e)
         {

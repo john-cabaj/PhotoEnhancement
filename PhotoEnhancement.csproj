@@ -66,6 +66,39 @@
     <Reference Include="ImageTools.Utils">
       <HintPath>..\..\..\..\..\Desktop\ImageTools 0.30\bin\Phone\ImageTools.Utils.dll</HintPath>
     </Reference>
+    <Reference Include="Leadtools">
+      <HintPath>..\..\..\..\..\..\..\LEADTOOLS 17.5\Bin\Silverlight\Leadtools.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Codecs">
+      <HintPath>..\..\..\..\..\..\..\LEADTOOLS 17.5\Bin\Silverlight\Leadtools.Codecs.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Codecs.Bmp">
+      <HintPath>..\..\..\..\..\..\..\LEADTOOLS 17.5\Bin\Silverlight\Leadtools.Codecs.Bmp.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Codecs.Cmp">
+      <HintPath>..\..\..\..\..\..\..\LEADTOOLS 17.5\Bin\Silverlight\Leadtools.Codecs.Cmp.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Codecs.Fax">
+      <HintPath>..\..\..\..\..\..\..\LEADTOOLS 17.5\Bin\Silverlight\Leadtools.Codecs.Fax.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Codecs.Gif">
+      <HintPath>..\..\..\..\..\..\..\LEADTOOLS 17.5\Bin\Silverlight\Leadtools.Codecs.Gif.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Codecs.J2k">
+      <HintPath>..\..\..\..\..\..\..\LEADTOOLS 17.5\Bin\Silverlight\Leadtools.Codecs.J2k.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Codecs.Png">
+      <HintPath>..\..\..\..\..\..\..\LEADTOOLS 17.5\Bin\Silverlight\Leadtools.Codecs.Png.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Codecs.Tif">
+      <HintPath>..\..\..\..\..\..\..\LEADTOOLS 17.5\Bin\Silverlight\Leadtools.Codecs.Tif.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Dicom">
+      <HintPath>..\..\..\..\..\..\..\LEADTOOLS 17.5\Bin\Silverlight\Leadtools.Dicom.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Windows.Controls">
+      <HintPath>..\..\..\..\..\..\..\LEADTOOLS 17.5\Bin\Silverlight\Leadtools.Windows.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Interop" />
@@ -76,9 +109,7 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="mscorlib.extensions" />
-    <Reference Include="WriteableBitmapExWinPhone">
-      <HintPath>..\..\..\..\..\Desktop\WriteableBitmapEx_v1.0.5.0\WindowsPhone\WriteableBitmapExWinPhone.dll</HintPath>
-    </Reference>
+    <Reference Include="WriteableBitmapExWinPhone, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllPhotos.xaml.cs">
@@ -125,6 +156,9 @@
     <Resource Include="Images\photos.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Content Include="Images\deleteItem.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\save.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
